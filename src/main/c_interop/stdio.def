@@ -1,0 +1,7 @@
+headers = stdio.h stdlib.h string.h time.h
+compilerOpts = -D_ANSI_SOURCE
+---
+
+static char * hello_message() {
+    return "Hello, World!";
+}

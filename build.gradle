@@ -1,0 +1,27 @@
+group 'com.park9eon'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies"
+        }
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:+"
+    }
+}
+
+apply plugin: 'konan'
+
+konanInterop {
+    stdio { }
+}
+
+konanArtifacts {
+    Hello {
+        useInterop 'stdio'
+    }
+}
